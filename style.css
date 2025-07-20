@@ -1,0 +1,105 @@
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #f34a53, #ce4c9e, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 360px;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  font-size: 2.4rem;
+  text-shadow: 0 0 8px #ff6ec4, 0 0 15px #7878ff;
+}
+
+.display {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+button {
+  flex: 1 1 40%;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  color: white;
+  user-select: none;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#start {
+  background: #00c851;
+  box-shadow: 0 6px 12px #00c851cc;
+}
+#pause {
+  background: #ed8864;
+  box-shadow: 0 6px 12px #ffbb33cc;
+  color: #222;
+}
+#reset {
+  background: #ff4444;
+  box-shadow: 0 6px 12px #ff4444cc;
+}
+#lap {
+  background: #33b5e5;
+  box-shadow: 0 6px 12px #33b5e5cc;
+}
+
+#laps {
+  margin-top: 1.8rem;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+  font-size: 1rem;
+  color: #eee;
+  border-top: 1px solid #555;
+}
+
+#laps li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #444;
+  letter-spacing: 1px;
+}
